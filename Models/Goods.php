@@ -48,4 +48,19 @@ class Goods
 
         return $result;
     }
+
+    function get_comments($good_id, $count = 10)
+    {
+        $result = array();
+
+        $stmt = $this->db->prepare('SELECT * FROM `comments` WHERE `good_id` = :id LIMIT :count');
+        $stmt->bindParam(':count', $count, PDO::PARAM_INT);
+        $stmt->bindParam(':id', $good_id);
+        $stmt->execute();
+
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
+            $result[] = $row;
+
+        return $result;
+    }
 }
