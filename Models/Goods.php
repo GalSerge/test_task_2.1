@@ -63,4 +63,13 @@ class Goods
 
         return $result;
     }
+
+    function add_comment($good_id, $text, $nickname)
+    {
+        $stmt = $this->db->prepare('INSERT INTO `comments`(`good_id`, `text`, `nickname`) 
+                                            VALUES (:good_id, :text, :nickname)');
+        $stmt->execute(array('good_id' => $good_id,
+            'text' => $text,
+            'nickname' => $nickname));
+    }
 }

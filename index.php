@@ -22,9 +22,10 @@ if (isset($_GET['good']))
     }
 
     $view->show_one_good($good, $comments);
-} else if (isset($_GET['comment']))
+} else if (isset($_GET['comment_to']))
 {
-    echo 2;
+    $_POST = json_decode(file_get_contents('php://input'), true);
+    $goods->add_comment($_GET['comment_to'], $_POST['text'], $_POST['nick']);
 } else
 {
     $goods_list = $goods->get_all();

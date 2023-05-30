@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="comms">
-        <div class="comms_list">
+        <div id="comms_list" class="comms_list">
             <?
 
             foreach ($comments as $comm) echo '<div class="comm">
@@ -25,16 +25,16 @@
 
             ?>
         </div>
-        <div class="comms_add">
+        <form id="add" class="comms_add">
             <div class="form_item">Оставить отзыв</div>
+            <div class="form_item"><input type="hidden" id="good_id" value="<? echo $good['good_id'] ?>"></div>
             <div class="form_item"><input type="text" id="nickname" placeholder="Имя"></div>
             <div class="form_item"><textarea type="text" id="text" placeholder="Отзыв" maxlength="140"></textarea></div>
             <div class="form_item" id="msg">
-                Спасибо за отзыв!
             </div>
             <div class="form_item">
-                <button type="button">Отправить</button>
+                <button type="button" onclick="send_comm();">Отправить</button>
             </div>
-        </div>
+        </form>
     </div>
 </div>
