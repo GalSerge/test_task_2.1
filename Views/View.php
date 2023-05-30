@@ -8,4 +8,12 @@ class View
         $content = 'Templates/goods_list.php';
         include 'Templates/main.php';
     }
+
+    function show_one_good($good, $comments)
+    {
+        $title = $good['name'];
+        $content = 'Templates/one_good.php';
+        include 'Templates/main.php';
+    }
+
 }

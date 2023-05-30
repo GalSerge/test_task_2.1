@@ -13,14 +13,15 @@ $view = new View();
 if (isset($_GET['good']))
 {
     $good = $goods->get_by_id($_GET['good']);
-    
+    $comments = $goods->get_comments($_GET['good']);
+
     if ($good == null)
     {
         header('HTTP/1.1 404 Not Found');
         die();
     }
 
-    $view->show_one_good($good);
+    $view->show_one_good($good, $comments);
 } else if (isset($_GET['comment']))
 {
     echo 2;
