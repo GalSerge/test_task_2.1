@@ -154,15 +154,15 @@ button:active {
         width: 60%;
     }
 
-    .comm .text, .comm .nickname, .comms_add, button, input, textarea {
-        font-size: 28px;
+    .card_title, .comm .text, .comm .nickname, .comms_add, button, input, textarea {
+        font-size: 24px;
     }
 
     button {
         height: 30px;
     }
 
-    .card_price, .card_title, button:active {
+    button:active {
         font-size: 30px;
     }
 
@@ -198,12 +198,10 @@ button:active {
     }
 
     .card_title {
-        font-size: 36px;
         padding: 5px 50px 20px;
     }
 
     .card_price {
-        font-size: 40px;
         padding: 5px 50px 0px;
     }
 }
