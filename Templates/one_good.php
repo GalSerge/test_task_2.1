@@ -1,6 +1,6 @@
 <div class="wrapper_good card">
     <div class="img_good">
-        <img src="images/img1.webp">
+        <img src="images/<? echo $good['image'] ?>">
     </div>
     <div class="info">
         <div class="card_title">

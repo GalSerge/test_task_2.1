@@ -2,7 +2,7 @@
     <?
 foreach ($goods_list as $good)
     echo '
-    <div class="card">
+    <a class="card" href="index.php?good='.$good['good_id'].'">
         <div class="card_img">
             <img src="images/'.$good['image'].'">
         </div>
@@ -12,6 +12,6 @@ foreach ($goods_list as $good)
         <div class="card_title">
             '.$good['name'].'
         </div>
-    </div>' ?>
+    </a>' ?>
 </div>
 
